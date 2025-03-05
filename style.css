@@ -1,0 +1,43 @@
+@font-face {
+  font-family: 'lulo'; /*a name to be used later*/
+  src: url(./Assets/lulo-clean-w01-one-bold.woff2); /*URL to font*/
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(25, 36, 63);
+  overflow: hidden;
+}
+
+.logo {
+  display: flex;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  padding-top: 40px;
+}
+
+.clk {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  line-height: 40px;
+  color: rgb(63, 118, 82);
+  font-size: 100px;
+  font-family: lulo;
+  letter-spacing: 7px;
+}
+
+.clock-container {
+  width: 1000px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
