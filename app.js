@@ -15,3 +15,46 @@ let clock = () => {
 };
 
 clock();
+
+const weekday = [
+  'Sunday',
+  'Monday',
+  'Tuesday',
+  'Wednesday',
+  'Thursday',
+  'Friday',
+  'Saturday',
+];
+
+const months = [
+  'January',
+  'February',
+  'March',
+  'April',
+  'May',
+  'June',
+  'July',
+  'August',
+  'September',
+  'October',
+  'November',
+  'December',
+];
+
+const d = new Date();
+let day = weekday[d.getDay()];
+let month = months[d.getMonth()];
+let year = d.getFullYear();
+let date = d.getDate();
+let suffix = '';
+if (date == 1 || date == 21 || date == 31) {
+  suffix = 'st';
+} else if (date == 2 || date == 22) {
+  suffix = 'nd';
+} else {
+  suffix = 'th';
+}
+
+document.getElementById(
+  'day'
+).innerText = `${day} ${month} ${date}${suffix} ${year}`;
